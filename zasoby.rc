@@ -1,0 +1,146 @@
+#include <windows.h>
+#include "winuser.h"
+#include "version.h"
+1 VERSIONINFO
+FILEVERSION RC_FILEVERSION
+PRODUCTVERSION RC_FILEVERSION
+FILETYPE VFT_APP
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904E4"
+        {
+            VALUE "FileVersion", RC_FILEVERSION_STRING
+            VALUE "Developer", "Sigrond93"
+            VALUE "Support", "sigrond93@gmail.com"
+            VALUE "ProductName", "TAK"
+        }
+    }
+}
+Ikona ICON "CodeOfMainWindow.ico"
+Menuopcje MENU
+{
+    POPUP "&Opcje"
+    {
+        MENUITEM "&Ustaw folder przeszukiwany", 11
+        MENUITEM "&Wyswietl wszystkie pliki", 12
+        MENUITEM "W&ypelnij liste", 13
+        MENUITEM "U&sun duplikaty", 14
+        MENUITEM "Usu&n dane", 20
+        MENUITEM SEPARATOR
+        MENUITEM "&Info", 15
+        POPUP "&Jezyk"
+        {
+            MENUITEM "Polski", 16, CHECKED
+            MENUITEM "English", 17, GRAYED
+        }
+        MENUITEM "Wlasciwosci", 21
+        //MENUITEM "Sprawdz dostepnosc nowej wersji", 19, GRAYED
+    }
+}
+
+#ifndef IDD_MOJDIALOG
+#define IDD_MOJDIALOG 200
+#endif
+#ifndef IDC_LABEL
+#define IDC_LABEL 201
+#endif
+IDD_MOJDIALOG DIALOG DISCARDABLE 0, 0, 150, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "info"
+FONT 10, "MS Sans Serif"
+{
+    LTEXT "tekst",IDC_LABEL,15,15,120,170
+    DEFPUSHBUTTON "&OK!",IDOK,45,175,60,20
+    //EDITTEXT 17,0,60,200,20
+}
+
+#ifndef IDD_DLG1
+#define IDD_DLG1 202
+#endif
+#ifndef IDC_PGB1
+#define IDC_PGB1 203
+#endif
+#ifndef IDC_LABEL2
+#define IDC_LABEL2 204
+#endif
+IDD_DLG1 DIALOGEX 300,200,150,60
+CAPTION "Wypelnianie listy..."
+FONT 8,"MS Sans Serif",0,0,0
+STYLE WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_TABSTOP
+{
+    LTEXT "tekst",IDC_LABEL2,15,15,120,10
+    CONTROL "",IDC_PGB1,"msctls_progress32",WS_CHILDWINDOW|WS_VISIBLE|PBS_SMOOTH,15,35,120,10
+}
+
+#ifndef IDD_EDITDLG
+#define IDD_EDITDLG 205
+#endif
+#ifndef IDC_EDIT_T
+#define IDC_EDIT_T 206
+#endif
+#ifndef IDC_EDIT_A
+#define IDC_EDIT_A 207
+#endif
+#ifndef IDC_EDIT_K
+#define IDC_EDIT_K 208
+#endif
+#ifndef IDC_EDIT_L
+#define IDC_EDIT_L 209
+#endif
+#ifndef IDC_E_T
+#define IDC_E_T 210
+#endif
+#ifndef IDC_E_A
+#define IDC_E_A 211
+#endif
+#ifndef IDC_E_K
+#define IDC_E_K 212
+#endif
+#ifndef IDC_E_L
+#define IDC_E_L 213
+#endif
+IDD_EDITDLG DIALOGEX DISCARDABLE 0,0,220,200
+CAPTION "Edytuj"
+FONT 8, "MS Sans Serif",0,0,0
+STYLE WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+{
+    LTEXT "Tytul:",IDC_E_T,10,5,100,12
+    EDITTEXT IDC_EDIT_T,10,15,200,22, ES_LEFT | WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL | ES_MULTILINE | ES_AUTOVSCROLL
+    LTEXT "Autor:",IDC_E_A,10,45,100,12
+    EDITTEXT IDC_EDIT_A,10,55,200,22, ES_LEFT | WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL | ES_MULTILINE | ES_AUTOVSCROLL
+    LTEXT "Slowa kluczowe:",IDC_E_K,10,85,100,12
+    EDITTEXT IDC_EDIT_K,10,95,200,22, ES_LEFT | WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL | ES_MULTILINE | ES_AUTOVSCROLL
+    LTEXT "Lokalizacja:",IDC_E_L,10,125,100,12
+    EDITTEXT IDC_EDIT_L,10,135,200,12, ES_LEFT | WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
+    DEFPUSHBUTTON "&Zapisz",IDOK,10,165,50,12
+    PUSHBUTTON "&Anuluj",IDCANCEL,70,165,50,12
+    PUSHBUTTON "&Otworz",3,130,165,50,12
+}
+
+#ifndef IDD_PROP
+#define IDD_PROP 214
+#endif
+#ifndef IDC_EDIT_O1
+#define IDC_EDIT_O1 215
+#endif
+#ifndef IDC_EDIT_O2
+#define IDC_EDIT_O2 216
+#endif
+IDD_PROP DIALOGEX DISCARDABLE 0,0,220,200
+CAPTION "Wlasciwosci"
+FONT 8, "MS Sans Serif",0,0,0
+STYLE WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+{
+    LTEXT "Kryterium wyszukiwania:      Edycji przy starcie:",1,5,5,200,12
+    EDITTEXT IDC_EDIT_O1,10,15,50,12, ES_LEFT | WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
+    EDITTEXT IDC_EDIT_O2,110,15,50,12, ES_LEFT | WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
+    DEFPUSHBUTTON "&OK",IDOK,10,135,50,12
+    PUSHBUTTON "&Anuluj",IDCANCEL,70,135,50,12
+}
+
+101 10 "exiftool.exe"
+//103 10 "AWyp.exe"
+//105 10 "SetPath.exe"
+107 10 "UsDu.exe"
+//111 10 "TAKinfo.exe"

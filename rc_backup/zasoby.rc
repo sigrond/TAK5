@@ -1,0 +1,28 @@
+Ikona ICON "CodeOfMainWindow.ico"
+Menuopcje MENU
+{
+          POPUP "&Opcje"
+          {
+                MENUITEM "&Ustaw folder przeszukiwany", 11
+                MENUITEM "&Wyswietl wszystkie pliki", 12
+                MENUITEM "W&ypelnij liste", 13
+                MENUITEM "U&sun duplikaty", 14
+                MENUITEM "&Info", 15
+          }
+}
+#include <windows.h>
+#define IDD_MOJDIALOG 200
+#define IDC_LABEL 201
+IDD_MOJDIALOG DIALOG DISCARDABLE 20, 20, 200, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "set path"
+FONT 8, "MS Sans Serif"
+{
+ DEFPUSHBUTTON "&Kontynuuj!",IDOK,124,18,50,14
+ LTEXT "ustaw katalog w nastêpnym oknie (w zwyk³ym standardzie)",IDC_LABEL,16,18,80,33
+}
+101 10 "exiftool.exe"
+103 10 "AWyp.exe"
+105 10 "SetPath.exe"
+107 10 "UsDu.exe"
+111 10 "TAKinfo.exe"

@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1362083565 source:c:\moje dokumenty\tak5\zasoby.rc
+	<windows.h>
+	"winuser.h"
+	"version.h"
+
+1362087048 source:c:\moje dokumenty\tak5\maincomw.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<string>
+	<cstdlib>
+	<sstream>
+	<sys/stat.h>
+	<dirent.h>
+	<cmath>
+	<algorithm>
+	<cstring>
+	<ctime>
+	<windows.h>
+	<commctrl.h>
+	<Windowsx.h>
+	<process.h>
+	<shlobj.h>
+	"version.h"
+	"subtitles.h"
+	"string_operations.h"
+	"file_operations.h"
+	"other_functions.h"
+	"message_call.h"
+
+1362088259 c:\moje dokumenty\tak5\version.h
+
+1356123686 source:c:\moje dokumenty\tak5\file_operations.cpp
+	<fstream>
+	<iostream>
+	<string>
+	<cstring>
+	<cstdio>
+
+1362087668 c:\moje dokumenty\tak5\string_operations.h
+
+1361884755 c:\moje dokumenty\tak5\file_operations.h
+
+1362070855 c:\moje dokumenty\tak5\message_call.h
+
+1356973986 c:\moje dokumenty\tak5\subtitles.h
+
+1362088259 c:\moje dokumenty\tak5\other_functions.h
+

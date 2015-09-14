@@ -1,0 +1,7 @@
+23 December 2012
+   released version 6.4.51 of CodeOfMainWindow
+
+     Change log:
+        -
+        -
+

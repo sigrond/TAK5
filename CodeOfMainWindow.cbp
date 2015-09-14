@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="CodeOfMainWindow" />
+		<Option platforms="Windows;" />
+		<Option execution_dir="C:\Dev-Cpp\" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option platforms="Windows;" />
+				<Option output="release\TAK" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-Wall" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libgcc -static-libstdc++" />
+					<Add library="comctl32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="file_operations.h" />
+		<Unit filename="mainCOMW.cpp" />
+		<Unit filename="message_call.h" />
+		<Unit filename="other_functions.h" />
+		<Unit filename="string_operations.h" />
+		<Unit filename="subtitles.h" />
+		<Unit filename="version.h" />
+		<Unit filename="zasoby.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<AutoVersioning>
+				<Scheme minor_max="100" build_max="1000" rev_max="10000" rev_rand_max="10" build_times_to_increment_minor="10" />
+				<Settings autoincrement="1" date_declarations="1" do_auto_increment="1" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
+			</AutoVersioning>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
